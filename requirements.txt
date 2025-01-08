@@ -1,0 +1,9 @@
+phidata
+duckduckgo-search
+groq
+google-gemini
+beautifulsoup4
+python-dotenv
+requests
+lxml
+pydantic
