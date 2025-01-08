@@ -42,6 +42,15 @@ You can see output of the agent in your terminal. Here is how it should look:
 
 ![example_gemini.png](example_gemini.png)
 
+You can also try out Groq model instead of Gemini.
+```bash
+python example_groq.py
+```
+
+It should output on your terminal. Here is how it should look:
+
+![example_groq.png](example_groq.png)
+
 ## Contributing
 
 We welcome contributions! Please fork and create a PR back to this project and tag me in comments for review.
