@@ -1,15 +1,15 @@
-# News Sharing AI Agent
+# News Sharing AI Agent 📰
 
 Welcome to the News Sharing AI Agent project! This project aims to develop an AI agent that can curate and share news articles of the given date.
 
-## Features
+## Features 🔥
 
 - **Search Internet**: AI Agent and search the internet to find news
 - **Uses State of the Art Phidata**: AI Agent is based on `phidata` - easy to understand and update
 - **Share Anywhere**: News fetching and sharing are separate tasks so could be performed modularly
 - **Coder-Friendly Interface**: Easy to use and navigate.
 
-## Installation
+## Installation 🧑‍💻
 
 To install and set up the project, follow these steps:
 
@@ -31,7 +31,7 @@ To install and set up the project, follow these steps:
   GOOGLE_API_KEY=yourkeyhere
   ```
 
-## Usage (main news AI Agent)
+## Usage (main news AI Agent) ✨
 
 AI Agent codes are in [news_poster_agent](news_poster_agent.py)
 
@@ -44,7 +44,7 @@ AI Agent codes are in [news_poster_agent](news_poster_agent.py)
 python news_poster_agent.py
 ```
 
-## Usage of examples
+## Usage of examples 🐳
 
 To start the AI agent, run the following command:
 ```bash
@@ -64,15 +64,15 @@ It should output on your terminal. Here is how it should look:
 
 ![example_groq.png](example_groq.png)
 
-## Contributing
+## Contributing ❤️
 
 We welcome contributions! Please fork and create a PR back to this project and tag me in comments for review.
 
-## License
+## License 💎
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-## Contact
+## Contact 🛵
 
 If you have any questions or suggestions, feel free to open an issue or contact me.
 
