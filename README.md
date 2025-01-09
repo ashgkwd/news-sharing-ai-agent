@@ -31,7 +31,20 @@ To install and set up the project, follow these steps:
   GOOGLE_API_KEY=yourkeyhere
   ```
 
-## Usage
+## Usage (main news AI Agent)
+
+AI Agent codes are in [news_poster_agent](news_poster_agent.py)
+
+- For now, it shares news on a custom backend through Aal class
+- News will be printed on stdout 📰
+- [ ] TODO: add sharing on telegram
+- [ ] TODO: add sharing on slack
+
+```bash
+python news_poster_agent.py
+```
+
+## Usage of examples
 
 To start the AI agent, run the following command:
 ```bash
