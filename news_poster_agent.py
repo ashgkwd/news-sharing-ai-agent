@@ -37,7 +37,6 @@ sources = [
     "site:aboutamazon.com",
     "site:investopedia.com",
     "site:techradar.com",
-    "site:techopedia.com",
     "site:techcrunch.com",
     "site:venturebeat.com",
     "site:edition.cnn.com",
