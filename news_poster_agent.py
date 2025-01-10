@@ -1,4 +1,5 @@
 import datetime
+import random
 from typing import Optional
 
 from dotenv import load_dotenv
@@ -26,29 +27,34 @@ class SearchResults(BaseModel):
 
 
 today = datetime.datetime.now().strftime("%d %b %Y")
-sources = """techradar.com
-wired.com
-technologyreview.com
-nvidianews.nvidia.com
-blogs.microsoft.com
-nbcnews.com
-reuters.com
-aboutamazon.com
-investopedia.com
-techopedia.com
-techcrunch.com
-venturebeat.com
-edition.cnn.com
-businesswire.com
-wsj.com
-bbc.com"""
+sources = [
+    "site:wired.com",
+    "site:technologyreview.com",
+    "site:nvidianews.nvidia.com",
+    "site:blogs.microsoft.com",
+    "site:nbcnews.com",
+    "site:reuters.com",
+    "site:aboutamazon.com",
+    "site:investopedia.com",
+    "site:techradar.com",
+    "site:techopedia.com",
+    "site:techcrunch.com",
+    "site:venturebeat.com",
+    "site:edition.cnn.com",
+    "site:businesswire.com",
+    "site:wsj.com",
+    "site:bbc.com"
+]
+
+random.shuffle(sources)
+sources_query = " OR ".join(sources)
 
 news_agent = Agent(
     name="News Agent",
     tools=[DuckDuckGo()],
     instructions=["Given a date, search 25 relevant news on 'AI Agent' topic. ",
-                  "Pick at least 15 most relevant ones out of those who has 'AI Agent' words in the title and body. ",
-                  f"Prefer news from sources: {sources}",
+                  "Pick at least 10 most relevant and newest ones out of those who has 'AI Agent' words in the title and body. ",
+                  f"Add this filter to search query: {sources_query}",
                   "Exclude negative news about violence, not suitable for work, abuse or other safety voilations. ",
                   "Only output url to articles, date of publishing and headings."],
     model=Groq(id="llama-3.3-70b-versatile", response_format={"type": "text"}),
