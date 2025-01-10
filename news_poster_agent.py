@@ -46,8 +46,8 @@ bbc.com"""
 news_agent = Agent(
     name="News Agent",
     tools=[DuckDuckGo()],
-    instructions=["Given a date, search 15 relevant news on 'AI Agent' topic. ",
-                  "Pick at least 5 most relevant ones out of those who has 'AI Agent' words in the title and body. ",
+    instructions=["Given a date, search 25 relevant news on 'AI Agent' topic. ",
+                  "Pick at least 15 most relevant ones out of those who has 'AI Agent' words in the title and body. ",
                   f"Prefer news from sources: {sources}",
                   "Exclude negative news about violence, not suitable for work, abuse or other safety voilations. ",
                   "Only output url to articles, date of publishing and headings."],
