@@ -51,11 +51,12 @@ sources_query = " OR ".join(sources)
 news_agent = Agent(
     name="News Agent",
     tools=[DuckDuckGo()],
-    instructions=["Given a date, search 25 relevant news on 'AI Agent' topic. ",
-                  "Pick at least 10 most relevant and newest ones out of those who has 'AI Agent' words in the title and body. ",
+    instructions=["Given a date, search 15 relevant news on 'AI Agent' topic. ",
+                  "Pick at least 5 most relevant and newest ones out of those who has 'AI Agent' words in the title. ",
                   f"Add this filter to search query: {sources_query}",
                   "Exclude negative news about violence, not suitable for work, abuse or other safety voilations. ",
-                  "Only output url to articles, date of publishing and headings."],
+                  "Only output url to articles, date of publishing, summary and headings.",
+                  "Do not make up non existing URLs. Only select real URLs where webpage exists"],
     model=Groq(id="llama-3.3-70b-versatile", response_format={"type": "text"}),
     response_model=SearchResults
 )
