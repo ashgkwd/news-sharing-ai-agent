@@ -56,7 +56,7 @@ class Aal:
         existing_titles = self.fetch_existing_news_titles()
         headers = {
             "Content-Type": "application/json",
-            "X-CSRF-Token": self.csrf_from_url(f"{self.base_url}/news")
+            "X-CSRF-Token": self.csrf_from_url(f"{self.base_url}/news.html")
         }
         for a in articles:
             if a.title in existing_titles:
